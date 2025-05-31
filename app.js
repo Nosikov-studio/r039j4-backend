@@ -1,4 +1,6 @@
 const express = require("express");
+const cors = require('cors')
+const morgan = require('morgan')
 const authRoutes = require('./routes/auth')
 const analyticsRoutes = require('./routes/analytics')
 const categoryRoutes = require('./routes/category')
@@ -15,7 +17,8 @@ const app = express();
  app.use(express.json());
  app.use(express.urlencoded({ extended: true }));
 
-
+ app.use(cors());
+ app.use(morgan('dev'));
 
 
 app.use('/api/auth', authRoutes)

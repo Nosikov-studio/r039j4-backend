@@ -1,4 +1,5 @@
 const express = require("express");
+const mongoose = require('mongoose')
 const cors = require('cors')
 // const morgan = require('morgan') // *зависимость устанавливается при начальной установке сервера
 const authRoutes = require('./routes/auth')
@@ -6,6 +7,7 @@ const analyticsRoutes = require('./routes/analytics')
 const categoryRoutes = require('./routes/category')
 const orderRoutes = require('./routes/order')
 const positionRoutes = require('./routes/position')
+const keys = require('./config/keys')
 const app = express();
 // Начиная с версии Express 4.16.0, пакет body-parser официально считается устаревшим 
 // (deprecated), поскольку его функциональность была интегрирована непосредственно 
@@ -20,6 +22,11 @@ const app = express();
  app.use(cors());
 // app.use(morgan()); // *зависимость устанавливается при начальной установке сервера
 
+mongoose.connect(keys.mongoURI)
+    .then(()=>console.log("Подключение установлено"))
+    .catch(error => console.log(error));
+   
+    
 
 app.use('/api/auth', authRoutes)
 app.use('/api/analytics', analyticsRoutes)

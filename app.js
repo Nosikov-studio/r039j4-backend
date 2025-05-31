@@ -18,7 +18,7 @@ const app = express();
  app.use(express.urlencoded({ extended: true }));
 
  app.use(cors());
- app.use(morgan('dev'));
+ app.use(morgan());
 
 
 app.use('/api/auth', authRoutes)

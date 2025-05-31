@@ -4,7 +4,7 @@ const analyticsRoutes = require('./routes/analytics')
 const categoryRoutes = require('./routes/category')
 const orderRoutes = require('./routes/order')
 const positionRoutes = require('./routes/position')
-
+const app = express();
 // Начиная с версии Express 4.16.0, пакет body-parser официально считается устаревшим 
 // (deprecated), поскольку его функциональность была интегрирована непосредственно 
 // в сам Express. Это означает, что теперь для разбора тела HTTP-запросов 
@@ -12,11 +12,11 @@ const positionRoutes = require('./routes/position')
 // отдельный модуль body-parser — вместо этого можно использовать встроенные 
 // методы Express: express.json() и express.urlencoded()
 
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+ app.use(express.json());
+ app.use(express.urlencoded({ extended: true }));
 
 
-const app = express();
+
 
 app.use('/api/auth', authRoutes)
 app.use('/api/analytics', analyticsRoutes)

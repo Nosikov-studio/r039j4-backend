@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require('cors')
-const morgan = require('morgan')
+// const morgan = require('morgan') // *зависимость устанавливается при начальной установке сервера
 const authRoutes = require('./routes/auth')
 const analyticsRoutes = require('./routes/analytics')
 const categoryRoutes = require('./routes/category')
@@ -18,7 +18,7 @@ const app = express();
  app.use(express.urlencoded({ extended: true }));
 
  app.use(cors());
- app.use(morgan());
+// app.use(morgan()); // *зависимость устанавливается при начальной установке сервера
 
 
 app.use('/api/auth', authRoutes)

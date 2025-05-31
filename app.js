@@ -12,8 +12,8 @@ const positionRoutes = require('./routes/position')
 // отдельный модуль body-parser — вместо этого можно использовать встроенные 
 // методы Express: express.json() и express.urlencoded()
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
 
 
 const app = express();

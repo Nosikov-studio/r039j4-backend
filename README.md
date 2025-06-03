@@ -1,12 +1,21 @@
 # r039j4-backend
 Учебный проект j4 по мотивам занятия на тему библиотеки passport.js
+Для простоты в этом примере мы не используем базу данных, 
+вместо неё используется экземпляр объекта пользователя в памяти. 
 
 https://www.youtube.com/watch?v=LDnwNtWIq_4
 
 
-Статья на hubr
+Статьи
 
 https://habr.com/ru/articles/201206/
+
+Простое объяснение как работает passport.js тут:
+https://www.reddit.com/r/node/comments/rk3o1g/can_anyone_help_me_understand_how_to_use/?tl=ru
+
+https://vectree.ru/text/101/0/0
+
+https://bsa-git.github.io/portfolio/node/express-passport/
 
 
 *****

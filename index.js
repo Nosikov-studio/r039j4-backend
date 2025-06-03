@@ -1,10 +1,11 @@
-const app = require('./app');
-const port = process.env.PORT || 40444;
+const express = require('express')
+const app = express()
+const port = 3000
 
 app.get('/', (req, res) => {
-
-    res.json({message: "working2"})
-});
+  res.send('Hello World!')
+})
 
 app.listen(port, () => {
-    console.log(`Сервер запущен на порту ${port}`)});
+  console.log(`Example app listening on port ${port}`)
+})

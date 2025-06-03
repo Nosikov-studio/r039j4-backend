@@ -1,5 +1,5 @@
 const passport = require ('passport');
-const LocalStorage = require('passport-local').Strategy;
+const LocalStrategy = require('passport-local').Strategy;
 
 // "фейковый" аккаунт
 
